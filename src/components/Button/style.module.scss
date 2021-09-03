@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.container {
+  background-color: $btnColor;
+  margin-top: 10px 0 10px;
+  border-color: transparent;
+  min-width: 100px;
+  padding: 10px;
+  color: $white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.container:hover {
+  opacity: 0.9;
+}
