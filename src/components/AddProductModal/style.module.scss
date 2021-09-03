@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.root {
+  background: $modalBackground;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .container {
+    background-color: $white;
+    top: 5em;
+    position: relative;
+    border-radius: 4px;
+    padding: 2em;
+    text-align: center;
+    .form {
+      display: flex;
+      flex-direction: column;
+      .errors {
+        text-align: start;
+        font-size: 12px;
+        color: $red;
+        padding: 0;
+        margin: 0 auto;
+        padding-top: 2em;
+      }
+      input {
+        height: 2.2em;
+        border-radius: 4px;
+        border: 0.5px solid $border;
+        margin-bottom: 1em;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
