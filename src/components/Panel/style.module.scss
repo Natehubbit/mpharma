@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.container {
+  background: $panelBackground;
+  padding: 2em;
+  list-style: none;
+  border-radius: 4px;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .panelList {
+    position: relative;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    border-top: 1px solid $border;
+    .noProducts {
+      text-align: center;
+      height: 50%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
