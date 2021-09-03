@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import { STATE_CACHE } from "../common/constants";
+import AddProductModal from "../components/AddProductModal";
+import EditProductModal from "../components/EditProductModal";
 import Panel from "../components/Panel";
 import { useLoader } from "../hooks/useLoader";
 import { useProducts } from "../hooks/useProducts";
@@ -36,6 +38,8 @@ const App = () => {
   return (
     <div className={styles.container}>
       <Panel products={products} loading={loading} />
+      <AddProductModal />
+      <EditProductModal />
     </div>
   );
 };

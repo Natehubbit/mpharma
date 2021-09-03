@@ -7,7 +7,6 @@ import { modalActions } from "../../redux/slice/modal";
 import { productActions } from "../../redux/slice/products";
 import { AppDispatch } from "../../redux/store";
 import { formatDate, getCashValue } from "../../utils";
-import AddProductModal from "../AddProductModal";
 import EditProductModal from "../EditProductModal";
 import IconButton from "../IconButton";
 import styles from "./style.module.scss";
@@ -88,8 +87,6 @@ const PanelItem: FC<PanelItemProps> = ({ product }) => {
           </>
         )}
       </li>
-      <AddProductModal />
-      <EditProductModal />
     </>
   );
 };

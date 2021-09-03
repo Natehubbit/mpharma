@@ -6,6 +6,7 @@ import { MOCK_PRODUCTS } from "../../../common/constants";
 import { productActions } from "../../../redux/slice/products";
 import { store } from "../../../redux/store";
 import ProductService from "../../../services/ProductsService";
+import EditProductModal from "../../EditProductModal";
 
 test("render successfully", async () => {
   const data = await ProductService.getProducts(MOCK_PRODUCTS);
@@ -38,14 +39,15 @@ test("render successfully and toggle historical prices", async () => {
 test("renders panel item and clicks edit and edit modal renders", async () => {
   const data = await ProductService.getProducts(MOCK_PRODUCTS);
   store.dispatch(productActions.set(data));
-  const { getByTestId } = render(
+  const { getByTestId, queryByTestId } = render(
     <Provider store={store}>
       <PanelItem product={data[0]} />
+      <EditProductModal />
     </Provider>
   );
 
   const editBtn = getByTestId("edit");
 
   userEvent.click(editBtn);
-  expect(screen.queryByTestId("edit-modal")).toBeTruthy();
+  expect(queryByTestId("edit-modal")).toBeTruthy();
 });
