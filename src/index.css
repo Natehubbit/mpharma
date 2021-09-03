@@ -1,0 +1,15 @@
+:root {
+  --btn-color: #3898ec;
+  --purple: #4129c7;
+  --black: #000;
+  --white: #ffffff;
+  --icon-blue: #157efb;
+  --header-blue: #0b24fb;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
